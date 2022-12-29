@@ -60,9 +60,9 @@ class MyApp extends StatelessWidget {
 
 ```
 
-![Full Demo](https://github.com/gabrielgits/bform/tree/main/example)
+[Full Demo Here](https://github.com/gabrielgits/bform/tree/main/example)
 
-![<img src="https://user-images.githubusercontent.com/72738617/209962432-d844f660-699d-402d-be8f-d06f8b7e1373.gif" width="180" />](https://github.com/gabrielgits/bform/tree/main/example)
+[<img src="https://user-images.githubusercontent.com/72738617/209962432-d844f660-699d-402d-be8f-d06f8b7e1373.gif" width="180" />](https://github.com/gabrielgits/bform/tree/main/example)
 
 ## Additional information
 
