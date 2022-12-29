@@ -13,7 +13,6 @@ dependencies:
     sdk: flutter
     
   # The following adds all package dependencies.
-  dropdown_search: ^5.0.2
   intl: ^0.17.0
 
 dev_dependencies:
