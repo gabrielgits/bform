@@ -10,7 +10,7 @@ Package to allows you to create beautiful forms.
 - text input
 - date picker
 - timer picker
-- select
+- button
 - group radio
 - list tile
 
@@ -60,15 +60,19 @@ class MyApp extends StatelessWidget {
 
 ```
 
+![Full Demo](https://github.com/gabrielgits/bform/tree/main/example)
+
+![<img src="https://user-images.githubusercontent.com/72738617/209962432-d844f660-699d-402d-be8f-d06f8b7e1373.gif" width="180" />](https://github.com/gabrielgits/bform/tree/main/example)
+
 ## Additional information
 
 For any bugs, issues and more information, please contact the package authors on email: gvgabrielvieiragabrielvieira@gmail.com.
 
 ## Developer(s)
 
-[<img src="https://avatars.githubusercontent.com/u/72738617?s=64&amp;v=4" width="180" />](https://gabrielvieira.ao)
-#### **Gabriel Vieira**
+[<img src="https://avatars.githubusercontent.com/u/72738617?v=4" width="180" />](https://gabrielvieira.ao)
+#### **Gabriel Vieira**(https://gabrielvieira.ao)
 
 ## License
 
-#### MIT LICENSE
+#### MIT LICENSE (https://github.com/gabrielgits/bform/blob/main/LICENSE) 
