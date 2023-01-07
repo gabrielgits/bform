@@ -54,7 +54,7 @@ class _MyAppState extends State<MyApp> {
       child: BformForm(
         appearance: appearance,
         width: MediaQuery.of(context).size.width - 20,
-        border: Border.all(),
+        border: Border.all(color: Colors.red),
         borderTitle: Border.all(),
         title: const Text(
           'Form Example',
