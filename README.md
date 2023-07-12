@@ -20,7 +20,7 @@ Package to allows you to create beautiful forms.
 
 ```yaml
 dependencies:
-   bform: "^0.1.0"
+   bform: "^0.1.2"
 ```
 
 3. Import the package into your dart file:
