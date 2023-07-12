@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-
 import 'utils/bform_appearance.dart';
 
 class BformDatePicker extends StatefulWidget {
@@ -11,8 +9,6 @@ class BformDatePicker extends StatefulWidget {
   final String? errorText;
   final DateTime? firstDate;
   final DateTime? lastDate;
-  final String? formatValue;
-  final String? formatDisplay;
   final ValueChanged<String>? onChange;
 
   const BformDatePicker({
@@ -25,8 +21,6 @@ class BformDatePicker extends StatefulWidget {
     this.errorText,
     this.firstDate,
     this.lastDate,
-    this.formatValue,
-    this.formatDisplay,
   }) : super(key: key);
 
   @override
@@ -38,7 +32,7 @@ class _BformDatePickerState extends State<BformDatePicker> {
   @override
   Widget build(BuildContext context) {
     TextEditingController dateInput =
-        TextEditingController(text: DateFormat('dd/MM/yyyy').format(data));
+        TextEditingController(text: '${data.day}/${data.month}/${data.year}');
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -60,12 +54,11 @@ class _BformDatePickerState extends State<BformDatePicker> {
               setState(() {
                 data = pickedDate;
                 dateInput.text =
-                    DateFormat(widget.formatDisplay ?? 'dd/MM/yyyy').format(
-                        pickedDate); //set output date to TextField value.
+                    '${pickedDate.day}/${pickedDate.month}/${pickedDate.year}'; //set output date to TextField value.
               });
               if (widget.onChange != null) {
-                widget.onChange!(DateFormat(widget.formatValue ?? 'yyyy-MM-dd')
-                    .format(pickedDate));
+                widget.onChange!(
+                    '${pickedDate.day}/${pickedDate.month}/${pickedDate.year}');
               }
             }
           },

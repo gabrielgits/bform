@@ -1,5 +1,4 @@
 import 'package:bform/bform.dart';
-import 'package:bform/src/models/ibform_model.dart';
 import 'package:flutter/material.dart';
 
 class BformGroupRadio extends StatefulWidget {
