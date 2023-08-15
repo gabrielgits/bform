@@ -4,7 +4,7 @@ class BformForm extends StatelessWidget {
   final Widget child;
   final Color color;
   final double width;
-  final double height;
+  final double? height;
   final Color background;
   final BoxBorder? border;
   final VoidCallback? onPressed;
@@ -19,7 +19,7 @@ class BformForm extends StatelessWidget {
     this.background = Colors.white,
     this.onPressed,
     this.onLongPress,
-    this.height = 300,
+    this.height,
   }) : super(key: key);
 
   @override

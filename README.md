@@ -20,7 +20,7 @@ Package to help you create beautiful forms widgets.
 
 ```yaml
 dependencies:
-   bform: "^0.2.0"
+   bform: "^0.2.1"
 ```
 
 3. Import the package into your dart file:
@@ -59,6 +59,7 @@ class MyApp extends StatelessWidget {
 
 [Full Demo Here](https://github.com/gabrielgits/bform/tree/main/example)
 
+[<img src="example1.png" width="180" />](https://github.com/gabrielgits/bform/tree/main/example)
 
 ## Additional information
 

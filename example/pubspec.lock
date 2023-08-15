@@ -12,12 +12,10 @@ packages:
   bform:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: dfe46d3b8efdc8bbaa61af95ab7cd9f4dd21db31
-      url: "https://github.com/gabrielgits/bform.git"
-    source: git
-    version: "0.1.2"
+      path: ".."
+      relative: true
+    source: path
+    version: "0.2.1"
   boolean_selector:
     dependency: transitive
     description:

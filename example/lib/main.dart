@@ -1,13 +1,17 @@
 import 'package:bform/bform.dart';
 import 'package:flutter/material.dart';
 
-import 'models/borm_obj_impl.dart';
-
+import 'borm_obj_impl.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
+        appBar: BformAppbar(
+          title: 'Bform Example',
+          color: Colors.blueGrey,
+          icon: Icons.menu,
+        ),
         body: SafeArea(child: MyApp()),
       ),
     ),
@@ -22,9 +26,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
-  BformObjImpl bformObj = BformObjImpl();
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -39,8 +40,12 @@ class _MyAppState extends State<MyApp> {
             const SizedBox(height: 30),
             BformGroupRadio(
               label: 'Select Title',
-              itemsList: [bformObj],
-              select: bformObj,
+              itemsList: const [
+                BformObjImpl(1),
+                BformObjImpl(2),
+                BformObjImpl(3),
+              ],
+              select: const BformObjImpl(1),
               onChange: (_) {},
               color: Colors.orange,
             ),
@@ -48,7 +53,7 @@ class _MyAppState extends State<MyApp> {
             Align(
               alignment: Alignment.centerRight,
               child: ElevatedButton(
-                onPressed: (){},
+                onPressed: () {},
                 child: const Text('Examble Button'),
               ),
             ),

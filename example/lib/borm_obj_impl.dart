@@ -1,8 +1,10 @@
 import 'package:bform/bform.dart';
 
 class BformObjImpl implements BformObj {
+  final int obj_id;
+  const BformObjImpl(this.obj_id);
   @override
-  int get id => 1;
+  int get id => obj_id;
   @override
   String get title => 'Model Title';
   @override
