@@ -1,16 +1,15 @@
-import 'package:bform/bform.dart';
 import 'package:flutter/material.dart';
 
+import 'bform_obj.dart';
+
 class BformGroupRadio extends StatefulWidget {
-  final IBformModel select;
-  final List<IBformModel> itemsList;
+  final BformObj select;
+  final List<BformObj> itemsList;
   final String label;
-  final ValueChanged<IBformModel> onChange;
+  final ValueChanged<BformObj> onChange;
   final double padding;
   final Color? color;
   final BoxBorder? border;
-  final BformAppearance? appearance;
-  final DecorationImage? background;
 
   const BformGroupRadio({
     Key? key,
@@ -18,10 +17,8 @@ class BformGroupRadio extends StatefulWidget {
     required this.itemsList,
     required this.select,
     required this.onChange,
-    this.padding  = 0,
-    this.appearance,
+    this.padding = 0,
     this.border,
-    this.background,
     this.color = Colors.white54,
   }) : super(key: key);
 
@@ -30,12 +27,12 @@ class BformGroupRadio extends StatefulWidget {
 }
 
 class _BformGroupRadioState extends State<BformGroupRadio> {
-  late IBformModel seletedValue;
+  late BformObj seletedValue;
 
   @override
   void initState() {
-    super.initState();
     seletedValue = widget.select;
+    super.initState();
   }
 
   @override
@@ -54,7 +51,7 @@ class _BformGroupRadioState extends State<BformGroupRadio> {
           child: Column(
             children: [
               for (var item in widget.itemsList)
-                RadioListTile<IBformModel>(
+                RadioListTile<BformObj>(
                   title: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -82,34 +79,9 @@ class _BformGroupRadioState extends State<BformGroupRadio> {
   }
 
   BoxDecoration decoration() {
-    if (widget.appearance == BformAppearance.soft) {
-      return BoxDecoration(
-        border:widget.border,
-        image: widget.background,
-        //borderRadius: BorderRadius.circular(10),
-        //boxShadow: const [BoxShadow(blurRadius: 3, color: Colors.black12)],
-      );
-    } else if (widget.appearance == BformAppearance.business) {
-      return BoxDecoration(
-        color: widget.color,
-        border: widget.border,
-        image: widget.background,
-        //borderRadius: BorderRadius.circular(8),
-        // boxShadow: const [BoxShadow(blurRadius: 2)],
-      );
-    } else if (widget.appearance == BformAppearance.sky) {
-      return BoxDecoration(
-        color: widget.color,
-        border: widget.border,
-        image: widget.background,
-        borderRadius: BorderRadius.circular(16),
-        //boxShadow: const [BoxShadow(blurRadius: 2)],
-      );
-    }
     return BoxDecoration(
       color: widget.color,
       border: widget.border,
-      image: widget.background,
       borderRadius: BorderRadius.circular(8),
     );
   }

@@ -1,18 +1,18 @@
 ## Bform
 
-Package to allows you to create beautiful forms.
+Package to help you create beautiful forms widgets.
 
 | **Support** | Android | iOS | Linux | macOS | Web | Windows |
 |-------------|---------|------|-------|--------|-----|-------------|
 
 ## Features
 
-- text input
-- date picker
-- timer picker
-- button
-- group radio
-- list tile
+- appbar
+- footer
+
+- form widgets
+- table widgets
+
 
 ## Getting started
 
@@ -20,7 +20,7 @@ Package to allows you to create beautiful forms.
 
 ```yaml
 dependencies:
-   bform: "^0.1.2"
+   bform: "^0.2.0"
 ```
 
 3. Import the package into your dart file:
@@ -47,10 +47,7 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Padding(
             padding: EdgeInsets.all(8.0),
-            child: BformTextInput(
-              title: 'Your Name',
-              icon: Icons.edit,
-            ),
+            BformTextInput(title: 'Input Example'),
           ),
         ),
       ),
@@ -62,7 +59,6 @@ class MyApp extends StatelessWidget {
 
 [Full Demo Here](https://github.com/gabrielgits/bform/tree/main/example)
 
-[<img src="https://user-images.githubusercontent.com/72738617/209962432-d844f660-699d-402d-be8f-d06f8b7e1373.gif" width="180" />](https://github.com/gabrielgits/bform/tree/main/example)
 
 ## Additional information
 

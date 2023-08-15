@@ -1,6 +1,6 @@
 name: bform
 description: Package to allows you to create beautiful forms.
-version: 0.1.2
+version: 0.2.0
 homepage: https://github.com/gabrielgits/bform.git
 
 environment:
@@ -14,4 +14,3 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0

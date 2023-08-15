@@ -1,9 +1,8 @@
 import 'package:bform/bform.dart';
 
-class ExampleModel implements IBformModel {
-
+class BformObjImpl implements BformObj {
   @override
-  int get selectId => 1;
+  int get id => 1;
   @override
   String get title => 'Model Title';
   @override
@@ -11,6 +10,5 @@ class ExampleModel implements IBformModel {
   @override
   String get imagePath => 'assets/images/refresh.png';
   @override
-  bool isSame(IBformModel value) => selectId == value.selectId;
-
+  bool isSame(BformObj value) => id == value.id;
 }
