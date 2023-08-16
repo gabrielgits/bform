@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class BformAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-  final Color color;
-  final IconData icon;
+  final Color? color;
+  final IconData? icon;
   const BformAppbar({
     super.key,
     required this.title,
-    required this.color,
-    required this.icon,
+    this.color,
+    this.icon,
   });
 
   @override
