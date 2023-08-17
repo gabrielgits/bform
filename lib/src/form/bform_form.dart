@@ -3,22 +3,18 @@ import 'package:flutter/material.dart';
 class BformForm extends StatelessWidget {
   final Widget child;
   final Color? color;
-  final double width;
+  final double? width;
   final double? height;
   final Color? background;
   final BoxBorder? border;
-  final VoidCallback? onPressed;
-  final VoidCallback? onLongPress;
 
   const BformForm({
     Key? key,
     required this.child,
     this.color,
-    this.width = 300,
+    this.width,
     this.border,
     this.background,
-    this.onPressed,
-    this.onLongPress,
     this.height,
   }) : super(key: key);
 
