@@ -6,12 +6,15 @@ class BformTable extends StatelessWidget {
   final List<List<String>> rows;
   final List<Widget?> actionButtons;
   final String? actionTitle;
-  const BformTable(
-      {super.key,
-      required this.titles,
-      required this.rows,
-      this.actionButtons = const [],
-      this.actionTitle});
+  final Color? color;
+  const BformTable({
+    super.key,
+    required this.titles,
+    required this.rows,
+    this.actionButtons = const [],
+    this.actionTitle,
+    this.color,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +34,7 @@ class BformTable extends StatelessWidget {
             children: <Widget>[
               for (var column in rows[i])
                 BformTableCell(
-                  color: Colors.lime,
+                  color: color,
                   child: Text(column),
                 ),
               if (actionButtons[i] != null)

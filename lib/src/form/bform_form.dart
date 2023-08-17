@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class BformForm extends StatelessWidget {
   final Widget child;
-  final Color color;
+  final Color? color;
   final double width;
   final double? height;
-  final Color background;
+  final Color? background;
   final BoxBorder? border;
   final VoidCallback? onPressed;
   final VoidCallback? onLongPress;
@@ -13,10 +13,10 @@ class BformForm extends StatelessWidget {
   const BformForm({
     Key? key,
     required this.child,
-    this.color = Colors.black,
+    this.color,
     this.width = 300,
     this.border,
-    this.background = Colors.white,
+    this.background,
     this.onPressed,
     this.onLongPress,
     this.height,
@@ -40,7 +40,7 @@ class BformForm extends StatelessWidget {
       color: background,
       border: border,
       borderRadius: BorderRadius.circular(8),
-      boxShadow: [BoxShadow(blurRadius: 10, color: color)],
+      boxShadow: (color != null) ? [BoxShadow(blurRadius: 10, color: color!)] : [BoxShadow(blurRadius: 10)],
     );
   }
 }

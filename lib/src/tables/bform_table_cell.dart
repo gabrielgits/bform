@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class BformTableCell extends StatelessWidget {
   final Widget child;
   final Color? color;
-  const BformTableCell({super.key, required this.child, this.color = Colors.black12});
+  const BformTableCell({super.key, required this.child, this.color});
 
   @override
   Widget build(BuildContext context) {

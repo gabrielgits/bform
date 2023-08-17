@@ -19,7 +19,7 @@ class BformSelect extends StatefulWidget {
     required this.onChange,
     this.padding = 5,
     this.border,
-    this.color = Colors.white54,
+    this.color,
   }) : super(key: key);
 
   @override
