@@ -9,7 +9,6 @@ Package to help you create beautiful forms widgets.
 
 - appbar
 - footer
-
 - form widgets
 - table widgets
 

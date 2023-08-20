@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BformTextInput extends StatelessWidget {
-  final String title;
+  final String label;
   final String? prefixText;
   final String? errorText;
   final double fontSize;
@@ -15,7 +15,7 @@ class BformTextInput extends StatelessWidget {
 
   const BformTextInput({
     Key? key,
-    required this.title,
+    required this.label,
     this.prefixText,
     this.fontSize = 14,
     this.onChange,
@@ -44,8 +44,8 @@ class BformTextInput extends StatelessWidget {
 
   InputDecoration decoration() {
     return InputDecoration(
-      labelText: title,
-      hintText: 'Enter $title',
+      labelText: label,
+      hintText: 'Enter $label',
       prefixText: prefixText,
       errorText: errorText,
       prefixIcon: icon ?? const Icon(Icons.keyboard),

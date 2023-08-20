@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BformCheckbox extends StatefulWidget {
-  final String title;
+  final String label;
   final VoidCallback? onChange;
   final double padding;
   final Color? color;
@@ -10,7 +10,7 @@ class BformCheckbox extends StatefulWidget {
 
   const BformCheckbox({
     Key? key,
-    required this.title,
+    required this.label,
     this.onChange,
     this.padding = 0,
     this.border,
@@ -53,7 +53,7 @@ class _BformGroupRadioState extends State<BformCheckbox> {
           ),
           const SizedBox(width: 10),
           Text(
-            widget.title,
+            widget.label,
             style: const TextStyle(fontSize: 16),
           ),
         ],

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'bform_obj.dart';
 
 class BformGroupRadio extends StatefulWidget {
-  final BformObj select;
-  final List<BformObj> itemsList;
+  final BformObj item;
+  final List<BformObj> listItems;
   final String label;
   final ValueChanged<BformObj> onChange;
   final double padding;
@@ -14,8 +14,8 @@ class BformGroupRadio extends StatefulWidget {
   const BformGroupRadio({
     Key? key,
     required this.label,
-    required this.itemsList,
-    required this.select,
+    required this.listItems,
+    required this.item,
     required this.onChange,
     this.padding = 0,
     this.border,
@@ -31,7 +31,7 @@ class _BformGroupRadioState extends State<BformGroupRadio> {
 
   @override
   void initState() {
-    seletedValue = widget.select;
+    seletedValue = widget.item;
     super.initState();
   }
 
@@ -50,7 +50,7 @@ class _BformGroupRadioState extends State<BformGroupRadio> {
           decoration: decoration(),
           child: Column(
             children: [
-              for (var item in widget.itemsList)
+              for (var item in widget.listItems)
                 RadioListTile<BformObj>(
                   title: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

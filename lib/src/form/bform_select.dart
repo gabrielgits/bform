@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'bform_obj.dart';
 
 class BformSelect extends StatefulWidget {
-  final BformObj select;
-  final List<BformObj> itemsList;
+  final BformObj item;
+  final List<BformObj> listItems;
   final String label;
   final ValueChanged<BformObj> onChange;
   final double padding;
@@ -14,8 +14,8 @@ class BformSelect extends StatefulWidget {
   const BformSelect({
     Key? key,
     required this.label,
-    required this.itemsList,
-    required this.select,
+    required this.listItems,
+    required this.item,
     required this.onChange,
     this.padding = 5,
     this.border,
@@ -32,7 +32,7 @@ class _BformSelectState extends State<BformSelect> {
   @override
   void initState() {
     super.initState();
-    seletedValue = widget.select;
+    seletedValue = widget.item;
   }
 
   @override
@@ -59,7 +59,7 @@ class _BformSelectState extends State<BformSelect> {
                 seletedValue = value;
               });
             },
-            items: widget.itemsList
+            items: widget.listItems
                 .map<DropdownMenuItem<BformObj>>((BformObj value) {
               return DropdownMenuItem(
                 value: value,

@@ -36,25 +36,27 @@ class _MyAppState extends State<MyApp> {
         child: Column(
           children: [
             const SizedBox(height: 30),
-            const BformTextInput(title: 'Input Example'),
+            const BformTextInput(label: 'Input Example'),
             const SizedBox(height: 30),
             BformGroupRadio(
               label: 'Select Title',
-              itemsList: const [
+              listItems: const [
                 BformObjImpl(1),
                 BformObjImpl(2),
                 BformObjImpl(3),
               ],
-              select: const BformObjImpl(1),
+              item: const BformObjImpl(1),
               onChange: (_) {},
               color: Colors.orange,
             ),
             const SizedBox(height: 30),
             Align(
               alignment: Alignment.centerRight,
-              child: ElevatedButton(
+              child: BformButton(
                 onPressed: () {},
-                child: const Text('Examble Button'),
+                colors: [Colors.green, Colors.yellow, Colors.red],
+                style: BformButtonStyle.highlighted,
+                label: ('Examble Button'),
               ),
             ),
           ],
