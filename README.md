@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
 
 [Full Demo Here](https://github.com/gabrielgits/bform/tree/main/example)
 
-[<img src="example1.png" width="180" />](https://github.com/gabrielgits/bform/tree/main/example)
+[<img src="https://raw.githubusercontent.com/gabrielgits/bform/main/example1.png" width="180" />](https://github.com/gabrielgits/bform/tree/main/example)
 
 ## Additional information
 
