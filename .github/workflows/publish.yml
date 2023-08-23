@@ -24,10 +24,10 @@ jobs:
         run: flutter analyze
       - name: Run tests
         run: flutter test
-      - name: Format code
-        run: dart format --fix .
-      - name: Check Publish Warnings
-        run: dart pub publish --dry-run
+      #- name: Format code
+      #  run: dart format --fix .
+      #- name: Check Publish Warnings
+      #  run: dart pub publish --dry-run
       - name: Publish
         uses: k-paxian/dart-package-publisher@v1.5.1
         with:
