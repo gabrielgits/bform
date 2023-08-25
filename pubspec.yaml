@@ -1,6 +1,6 @@
 name: bform
 description: Package to help you create beautiful forms widgets.
-version: 0.3.0
+version: 0.3.1
 homepage: https://github.com/gabrielgits/bform.git
 
 environment:

@@ -68,10 +68,15 @@ class _MyAppState extends State<MyApp> {
           const SizedBox(height: 30),
           BformTableText(
               titles: const ['Title 1', 'Title 2'],
+              actionButtons: const [
+                Icon(Icons.add),
+                Icon(Icons.delete),
+                Icon(Icons.edit),
+              ],
               listElements: [
-                ['Row 1 Element 1', 'Row 1 Element 2'],
-                ['Row 2 Element 1', 'Row 2 Element 2'],
-                ['Row 3 Element 1', 'Row 3 Element 2'],
+                ['1 Element 1', '1 Element 2'],
+                ['2 Element 1', '2 Element 2'],
+                ['3 Element 1', '3 Element 2'],
               ],
             ),
         ],
