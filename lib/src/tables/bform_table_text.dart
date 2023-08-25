@@ -32,7 +32,8 @@ class BformTableText extends StatelessWidget {
     List<List<Widget>> rows = [];
     int i = 0;
     for (final elements in listElements){
-      List<Widget> row = elements.map((e) => Text(e, style: TextStyle(color: colorText))).toList();
+      List<Widget> row = [...elements.map((e) => Text(e, style: TextStyle(color: colorText))).toList()];
+
       if (actionButtons.isNotEmpty){
         row.add(actionButtons[i]!);
       }
