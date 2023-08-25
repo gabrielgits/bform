@@ -28,39 +28,53 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return SingleChildScrollView(
       padding: const EdgeInsets.all(10.0),
-      child: BformForm(
-        width: MediaQuery.of(context).size.width - 20,
-        border: Border.all(color: Colors.red),
-        child: Column(
-          children: [
-            const SizedBox(height: 30),
-            const BformTextInput(label: 'Input Example'),
-            const SizedBox(height: 30),
-            BformGroupRadio(
-              label: 'Select Title',
-              listItems: const [
-                BformObjImpl(1),
-                BformObjImpl(2),
-                BformObjImpl(3),
+      child: Column(
+        children: [
+          BformForm(
+            background: Colors.white,
+            width: MediaQuery.of(context).size.width - 20,
+            border: Border.all(color: Colors.red),
+            child: Column(
+              children: [
+                const SizedBox(height: 30),
+                const BformTextInput(label: 'Input Example'),
+                const SizedBox(height: 30),
+                BformGroupRadio(
+                  label: 'Select Title',
+                  listItems: const [
+                    BformObjImpl(1),
+                    BformObjImpl(2),
+                    BformObjImpl(3),
+                  ],
+                  item: const BformObjImpl(1),
+                  onChange: (_) {},
+                  color: Colors.orange,
+                ),
+                const SizedBox(height: 30),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: BformButton(
+                    onPressed: () {},
+                    colors: [Colors.green, Colors.yellow, Colors.red],
+                    style: BformButtonStyle.highlighted,
+                    label: ('Examble Button'),
+                  ),
+                ),
               ],
-              item: const BformObjImpl(1),
-              onChange: (_) {},
-              color: Colors.orange,
             ),
-            const SizedBox(height: 30),
-            Align(
-              alignment: Alignment.centerRight,
-              child: BformButton(
-                onPressed: () {},
-                colors: [Colors.green, Colors.yellow, Colors.red],
-                style: BformButtonStyle.highlighted,
-                label: ('Examble Button'),
-              ),
+          ),
+          const SizedBox(height: 30),
+          BformTableText(
+              titles: const ['Title 1', 'Title 2'],
+              listElements: [
+                ['Row 1 Element 1', 'Row 1 Element 2'],
+                ['Row 2 Element 1', 'Row 2 Element 2'],
+                ['Row 3 Element 1', 'Row 3 Element 2'],
+              ],
             ),
-          ],
-        ),
+        ],
       ),
     );
   }

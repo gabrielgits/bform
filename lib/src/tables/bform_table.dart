@@ -2,43 +2,42 @@ import 'package:flutter/material.dart';
 import 'bform_table_cell.dart';
 
 class BformTable extends StatelessWidget {
-  final List<String> titles;
-  final List<List<String>> rows;
-  final List<Widget?> actionButtons;
-  final String? actionTitle;
+  final List<Widget> headers;
+  final List<List<Widget>> rows;
+  final Color? colorHeader;
   final Color? color;
+  final TableBorder? border;
   const BformTable({
     super.key,
-    required this.titles,
+    required this.headers,
     required this.rows,
-    this.actionButtons = const [],
-    this.actionTitle,
+    this.colorHeader,
     this.color,
+    this.border,
   });
 
   @override
   Widget build(BuildContext context) {
     return Table(
-      border: TableBorder.all(),
-      //defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+      border: border,
       children: <TableRow>[
         TableRow(
           children: <Widget>[
-            for (var title in titles) BformTableCell(child: Text(title)),
-            if (actionTitle != null)
-              BformTableCell(child: Text(actionTitle ?? '')),
+            for (final header in headers)
+              BformTableCell(
+                child: header,
+                color: colorHeader,
+              ),
           ],
         ),
-        for (int i = 0; i < rows.length; i++)
+        for (final row in rows)
           TableRow(
             children: <Widget>[
-              for (var column in rows[i])
+              for (var column in row)
                 BformTableCell(
                   color: color,
-                  child: Text(column),
+                  child: column,
                 ),
-              if (actionButtons[i] != null)
-                BformTableCell(child: actionButtons[i] ?? const SizedBox()),
             ],
           ),
       ],
