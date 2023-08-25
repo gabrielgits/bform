@@ -4,23 +4,22 @@ import 'bform_table_cell.dart';
 class BformTable extends StatelessWidget {
   final List<Widget> headers;
   final List<List<Widget>> rows;
-  final List<Widget?> actionButtons;
   final Color? colorHeader;
   final Color? color;
+  final TableBorder? border;
   const BformTable({
     super.key,
     required this.headers,
     required this.rows,
-    this.actionButtons = const [],
     this.colorHeader,
     this.color,
+    this.border,
   });
 
   @override
   Widget build(BuildContext context) {
     return Table(
-      border: TableBorder.all(),
-      //defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+      border: border,
       children: <TableRow>[
         TableRow(
           children: <Widget>[

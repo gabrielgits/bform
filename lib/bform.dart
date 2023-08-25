@@ -12,5 +12,6 @@ export 'src/form/bform_select.dart';
 export 'src/form/bform_text_input.dart';
 export 'src/form/bform_button.dart';
 
-export 'src/tables/bform_table.dart';
 export 'src/tables/bform_table_cell.dart';
+export 'src/tables/bform_table.dart';
+export 'src/tables/bform_table_text.dart';
