@@ -14,6 +14,8 @@ class BformButton extends StatelessWidget {
   final Color? textColor;
   final BformButtonStyle style;
   final IconData? icon;
+  final double? fontSize;
+  final FontWeight? fontWeight;
 
   const BformButton({
     super.key,
@@ -24,6 +26,8 @@ class BformButton extends StatelessWidget {
     this.textColor,
     this.style = BformButtonStyle.regular,
     this.icon,
+    this.fontSize,
+    this.fontWeight,
   });
 
   @override
@@ -69,13 +73,13 @@ class BformButton extends StatelessWidget {
                           : TextAlign.center,
                       style: switch (style) {
                         BformButtonStyle.outlined => TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w700,
+                            fontSize: fontSize,
+                            fontWeight: fontWeight,
                             color: colors.first,
                           ),
                         _ => TextStyle(
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.w700,
+                            fontSize: fontSize,
+                            fontWeight: fontWeight,
                             color: textColor,
                           ),
                       },
