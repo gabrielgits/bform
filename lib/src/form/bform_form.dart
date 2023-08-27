@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class BformForm extends StatelessWidget {
   final Widget child;
+  final bool scrollable;
   final Color? color;
   final double? width;
   final double? height;
@@ -16,18 +17,17 @@ class BformForm extends StatelessWidget {
     this.border,
     this.background,
     this.height,
+    this.scrollable = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        width: width,
-        height: height,
-        padding: const EdgeInsets.fromLTRB(10, 25, 10, 10),
-        decoration: decoration(),
-        child: child,
-      ),
+    return Container(
+      width: width,
+      height: height,
+      padding: const EdgeInsets.fromLTRB(10, 25, 10, 10),
+      decoration: decoration(),
+      child: scrollable ? SingleChildScrollView(child: child) :  child,
     );
   }
 
