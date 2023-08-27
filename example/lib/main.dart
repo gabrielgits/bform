@@ -41,6 +41,10 @@ class _MyAppState extends State<MyApp> {
                 const SizedBox(height: 30),
                 const BformTextInput(label: 'Input Example'),
                 const SizedBox(height: 30),
+                BformCheckbox(
+                  label: 'Checkbox',
+                ),
+                const SizedBox(height: 30),
                 BformGroupRadio(
                   label: 'Select Title',
                   listItems: const [
