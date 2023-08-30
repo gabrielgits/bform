@@ -36,6 +36,12 @@ class _BformSelectState extends State<BformSelect> {
   }
 
   @override
+  void didUpdateWidget(covariant BformSelect oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    seletedValue = widget.item;
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

@@ -36,6 +36,12 @@ class _BformGroupRadioState extends State<BformGroupRadio> {
   }
 
   @override
+  void didUpdateWidget(covariant BformGroupRadio oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    seletedValue = widget.item;
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
