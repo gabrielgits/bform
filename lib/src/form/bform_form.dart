@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class BformForm extends StatelessWidget {
   final Widget child;
-  final bool scrollable;
   final Color? color;
   final double? width;
   final double? height;
@@ -17,7 +16,6 @@ class BformForm extends StatelessWidget {
     this.border,
     this.background,
     this.height,
-    this.scrollable = false,
   }) : super(key: key);
 
   @override
@@ -27,7 +25,7 @@ class BformForm extends StatelessWidget {
       height: height,
       padding: const EdgeInsets.fromLTRB(10, 25, 10, 10),
       decoration: decoration(),
-      child: scrollable ? SingleChildScrollView(child: child) :  child,
+      child: SingleChildScrollView(child: child),
     );
   }
 
@@ -36,7 +34,7 @@ class BformForm extends StatelessWidget {
       color: background,
       border: border,
       borderRadius: BorderRadius.circular(8),
-      boxShadow: (color != null) ? [BoxShadow(blurRadius: 10, color: color!)] : [BoxShadow(blurRadius: 10)],
+      boxShadow: (color != null) ? [BoxShadow(blurRadius: 10, color: color!)] : null,
     );
   }
 }

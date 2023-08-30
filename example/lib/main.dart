@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
       child: Column(
         children: [
           BformForm(
-            background: Colors.white,
+            color: Colors.red,
             width: MediaQuery.of(context).size.width - 20,
             border: Border.all(color: Colors.red),
             child: Column(
