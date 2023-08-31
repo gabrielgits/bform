@@ -66,7 +66,7 @@ For any bugs, issues and more information, please contact the package authors on
 
 ## Developer(s)
 
-[<img src="https://avatars.githubusercontent.com/u/72738617?v=4" width="180" />](https://gabrielvieira.ao)
+[<img src="https://avatars.githubusercontent.com/u/72738617?v=4" width="62" style="border-radius: 50%;" />](https://gabrielvieira.ao)
 #### **Gabriel Vieira**(https://gabrielvieira.ao)
 
 ## License
