@@ -20,14 +20,12 @@ class BformForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        width: width,
-        height: height,
-        padding: const EdgeInsets.fromLTRB(10, 25, 10, 10),
-        decoration: decoration(),
-        child: child,
-      ),
+    return Container(
+      width: width,
+      height: height,
+      padding: const EdgeInsets.fromLTRB(10, 25, 10, 10),
+      decoration: decoration(),
+      child: SingleChildScrollView(child: child),
     );
   }
 
@@ -36,7 +34,7 @@ class BformForm extends StatelessWidget {
       color: background,
       border: border,
       borderRadius: BorderRadius.circular(8),
-      boxShadow: (color != null) ? [BoxShadow(blurRadius: 10, color: color!)] : [BoxShadow(blurRadius: 10)],
+      boxShadow: (color != null) ? [BoxShadow(blurRadius: 10, color: color!)] : null,
     );
   }
 }

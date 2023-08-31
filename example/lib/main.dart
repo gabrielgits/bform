@@ -26,6 +26,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  bool checkActive = false;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -33,13 +34,21 @@ class _MyAppState extends State<MyApp> {
       child: Column(
         children: [
           BformForm(
-            background: Colors.white,
+            color: Colors.red,
             width: MediaQuery.of(context).size.width - 20,
             border: Border.all(color: Colors.red),
             child: Column(
               children: [
                 const SizedBox(height: 30),
                 const BformTextInput(label: 'Input Example'),
+                const SizedBox(height: 30),
+                BformCheckbox(
+                  inicialState: checkActive,
+                  label: 'Checkbox',
+                  onChange: (value) {
+                    checkActive = value;
+                  },
+                ),
                 const SizedBox(height: 30),
                 BformGroupRadio(
                   label: 'Select Title',
@@ -56,7 +65,12 @@ class _MyAppState extends State<MyApp> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: BformButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        checkActive = !checkActive;
+                      });
+                      
+                    },
                     colors: [Colors.green, Colors.yellow, Colors.red],
                     style: BformButtonStyle.highlighted,
                     label: ('Examble Button'),

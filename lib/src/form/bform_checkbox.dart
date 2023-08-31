@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class BformCheckbox extends StatefulWidget {
   final String label;
-  final VoidCallback? onChange;
+  final Function(bool)? onChange;
   final double padding;
   final Color? color;
   final BoxBorder? border;
@@ -27,10 +27,15 @@ class _BformGroupRadioState extends State<BformCheckbox> {
 
   @override
   void initState() {
-    isChecked = widget.inicialState;
     super.initState();
+     isChecked = widget.inicialState;
   }
 
+  @override
+  void didUpdateWidget(covariant BformCheckbox oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    isChecked = widget.inicialState;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,8 +51,9 @@ class _BformGroupRadioState extends State<BformCheckbox> {
             checkColor: widget.color,
             value: isChecked,
             onChanged: (bool? value) {
+              widget.onChange!(value!);
               setState(() {
-                isChecked = value!;
+                isChecked = value;
               });
             },
           ),
