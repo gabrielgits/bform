@@ -62,6 +62,8 @@ class _MyAppState extends State<MyApp> {
                   color: Colors.orange,
                 ),
                 const SizedBox(height: 30),
+                BformDivider(),
+                const SizedBox(height: 30),
                 Align(
                   alignment: Alignment.centerRight,
                   child: BformButton(
@@ -69,7 +71,6 @@ class _MyAppState extends State<MyApp> {
                       setState(() {
                         checkActive = !checkActive;
                       });
-                      
                     },
                     colors: [Colors.green, Colors.yellow, Colors.red],
                     style: BformButtonStyle.highlighted,
@@ -80,19 +81,21 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
           const SizedBox(height: 30),
+          BformDivider(),
+          const SizedBox(height: 30),
           BformTableText(
-              titles: const ['Title 1', 'Title 2'],
-              actionButtons: const [
-                Icon(Icons.add),
-                Icon(Icons.delete),
-                Icon(Icons.edit),
-              ],
-              listElements: [
-                ['1 Element 1', '1 Element 2'],
-                ['2 Element 1', '2 Element 2'],
-                ['3 Element 1', '3 Element 2'],
-              ],
-            ),
+            titles: const ['Title 1', 'Title 2'],
+            actionButtons: const [
+              Icon(Icons.add),
+              Icon(Icons.delete),
+              Icon(Icons.edit),
+            ],
+            listElements: [
+              ['1 Element 1', '1 Element 2'],
+              ['2 Element 1', '2 Element 2'],
+              ['3 Element 1', '3 Element 2'],
+            ],
+          ),
         ],
       ),
     );
