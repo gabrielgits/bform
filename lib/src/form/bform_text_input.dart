@@ -11,6 +11,7 @@ class BformTextInput extends StatelessWidget {
   final String? defaultValue;
   final bool? obscureText;
   final bool readOnly;
+  final String? hintText;
   final TextEditingController? controller;
 
   const BformTextInput({
@@ -25,6 +26,7 @@ class BformTextInput extends StatelessWidget {
     this.obscureText,
     this.controller,
     this.errorText,
+    this.hintText,
     this.readOnly = false,
   }) : super(key: key);
 
@@ -45,7 +47,7 @@ class BformTextInput extends StatelessWidget {
   InputDecoration decoration() {
     return InputDecoration(
       labelText: label,
-      hintText: 'Enter $label',
+      hintText: hintText ?? 'Enter $label',
       prefixText: prefixText,
       errorText: errorText,
       prefixIcon: icon ?? const Icon(Icons.keyboard),
