@@ -34,13 +34,13 @@ class _MyAppState extends State<MyApp> {
       child: Column(
         children: [
           BformForm(
-            color: Colors.red,
+            color: Colors.grey,
             width: MediaQuery.of(context).size.width - 20,
             border: Border.all(color: Colors.red),
             child: Column(
               children: [
                 const SizedBox(height: 30),
-                const BformTextInput(label: 'Input Example'),
+                const BformTextInput(label: 'Input Example', hintText: 'Hint Text Example',),
                 const SizedBox(height: 30),
                 BformCheckbox(
                   inicialState: checkActive,
