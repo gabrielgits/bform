@@ -79,7 +79,11 @@ class BformButton extends StatelessWidget {
                       width: fontSize == null ? null : fontSize! * 1.5,
                     )),
                   if (iconSuffix == false && icon != null) //
-                    Expanded(child: Icon(icon)),
+                    Expanded(
+                        child: Icon(
+                      icon,
+                      size: fontSize == null ? null : fontSize! * 1.5,
+                    )),
                   Expanded(
                     child: Text(
                       label,
@@ -101,9 +105,18 @@ class BformButton extends StatelessWidget {
                     ),
                   ),
                   if (iconSuffix == true && iconAsset != null)
-                    Expanded(child: Image.asset(iconAsset!)),
+                    Expanded(
+                        child: Image.asset(
+                      iconAsset!,
+                      height: fontSize == null ? null : fontSize! * 1.5,
+                      width: fontSize == null ? null : fontSize! * 1.5,
+                    )),
                   if (iconSuffix == true && icon != null) //
-                    Expanded(child: Icon(icon)),
+                    Expanded(
+                        child: Icon(
+                      icon,
+                      size: fontSize == null ? null : fontSize! * 1.5,
+                    )),
                 ],
               ),
             ),
