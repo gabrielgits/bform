@@ -72,7 +72,12 @@ class BformButton extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   if (iconSuffix == false && iconAsset != null)
-                    Expanded(child: Image.asset(iconAsset!)),
+                    Expanded(
+                        child: Image.asset(
+                      iconAsset!,
+                      height: fontSize == null ? null : fontSize! * 1.5,
+                      width: fontSize == null ? null : fontSize! * 1.5,
+                    )),
                   if (iconSuffix == false && icon != null) //
                     Expanded(child: Icon(icon)),
                   Expanded(

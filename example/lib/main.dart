@@ -75,8 +75,9 @@ class _MyAppState extends State<MyApp> {
                         checkActive = !checkActive;
                       });
                     },
+                    iconAsset: 'assets/images/google.png',
+                    fontSize: 16,
                     weight: MediaQuery.of(context).size.width * 0.4,
-                    icon: Icons.notifications,
                     colors: [Colors.green, Colors.yellow, Colors.red],
                     style: BformButtonStyle.highlighted,
                     label: ('Examble Button'),
