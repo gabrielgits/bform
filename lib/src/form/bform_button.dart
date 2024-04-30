@@ -72,51 +72,47 @@ class BformButton extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   if (iconSuffix == false && iconAsset != null)
-                    Expanded(
-                        child: Image.asset(
+                    Image.asset(
                       iconAsset!,
                       height: fontSize == null ? null : fontSize! * 1.5,
                       width: fontSize == null ? null : fontSize! * 1.5,
-                    )),
-                  if (iconSuffix == false && icon != null) //
-                    Expanded(
-                        child: Icon(
-                      icon,
-                      size: fontSize == null ? null : fontSize! * 1.5,
-                    )),
-                  Expanded(
-                    child: Text(
-                      label,
-                      textAlign: iconAsset != null //
-                          ? TextAlign.start
-                          : TextAlign.center,
-                      style: switch (style) {
-                        BformButtonStyle.outlined => TextStyle(
-                            fontSize: fontSize,
-                            fontWeight: fontWeight,
-                            color: colors.first,
-                          ),
-                        _ => TextStyle(
-                            fontSize: fontSize,
-                            fontWeight: fontWeight,
-                            color: textColor,
-                          ),
-                      },
                     ),
+                  if (iconSuffix == false && icon != null) //
+                    Icon(
+                      icon,
+                      size: fontSize == null ? null : fontSize! * 1.5,
+                    ),
+                  SizedBox(width: 8),
+                  Text(
+                    label,
+                    textAlign: iconAsset != null //
+                        ? TextAlign.start
+                        : TextAlign.center,
+                    style: switch (style) {
+                      BformButtonStyle.outlined => TextStyle(
+                          fontSize: fontSize,
+                          fontWeight: fontWeight,
+                          color: colors.first,
+                        ),
+                      _ => TextStyle(
+                          fontSize: fontSize,
+                          fontWeight: fontWeight,
+                          color: textColor,
+                        ),
+                    },
                   ),
+                  SizedBox(width: 8),
                   if (iconSuffix == true && iconAsset != null)
-                    Expanded(
-                        child: Image.asset(
+                    Image.asset(
                       iconAsset!,
                       height: fontSize == null ? null : fontSize! * 1.5,
                       width: fontSize == null ? null : fontSize! * 1.5,
-                    )),
+                    ),
                   if (iconSuffix == true && icon != null) //
-                    Expanded(
-                        child: Icon(
+                    Icon(
                       icon,
                       size: fontSize == null ? null : fontSize! * 1.5,
-                    )),
+                    ),
                 ],
               ),
             ),

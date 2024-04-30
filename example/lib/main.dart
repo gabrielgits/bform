@@ -78,7 +78,7 @@ class _MyAppState extends State<MyApp> {
                     //iconAsset: 'assets/images/google.png',
                     icon: Icons.notifications,
                     fontSize: 16,
-                    weight: MediaQuery.of(context).size.width * 0.5,
+                    //weight: MediaQuery.of(context).size.width * 0.5,
                     colors: [Colors.green, Colors.yellow, Colors.red],
                     style: BformButtonStyle.highlighted,
                     label: ('Examble Button'),
