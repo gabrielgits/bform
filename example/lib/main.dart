@@ -40,7 +40,10 @@ class _MyAppState extends State<MyApp> {
             child: Column(
               children: [
                 const SizedBox(height: 30),
-                const BformTextInput(label: 'Input Example', hintText: 'Hint Text Example',),
+                const BformTextInput(
+                  label: 'Input Example',
+                  hintText: 'Hint Text Example',
+                ),
                 const SizedBox(height: 30),
                 BformCheckbox(
                   inicialState: checkActive,
@@ -72,6 +75,8 @@ class _MyAppState extends State<MyApp> {
                         checkActive = !checkActive;
                       });
                     },
+                    weight: MediaQuery.of(context).size.width * 0.4,
+                    icon: Icons.notifications,
                     colors: [Colors.green, Colors.yellow, Colors.red],
                     style: BformButtonStyle.highlighted,
                     label: ('Examble Button'),
