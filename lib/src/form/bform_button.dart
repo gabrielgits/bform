@@ -9,13 +9,16 @@ enum BformButtonStyle {
 class BformButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final String label;
-  final String? iconAsset;
+
   final List<Color> colors;
   final Color? textColor;
   final BformButtonStyle style;
   final IconData? icon;
+  final String? iconAsset;
+  final bool iconSuffix;
   final double? fontSize;
   final FontWeight? fontWeight;
+  final double? weight;
 
   const BformButton({
     super.key,
@@ -26,8 +29,10 @@ class BformButton extends StatelessWidget {
     this.textColor,
     this.style = BformButtonStyle.regular,
     this.icon,
+    this.iconSuffix = false,
     this.fontSize,
     this.fontWeight,
+    this.weight,
   });
 
   @override
@@ -40,6 +45,7 @@ class BformButton extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(6.0)),
         ),
         child: Ink(
+          width: this.weight,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(6.0)),
             color: style == BformButtonStyle.regular && colors.isNotEmpty
@@ -65,6 +71,10 @@ class BformButton extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  if (iconSuffix == false && iconAsset != null)
+                    Expanded(child: Image.asset(iconAsset!)),
+                  if (iconSuffix == false && icon != null) //
+                    Expanded(child: Icon(icon)),
                   Expanded(
                     child: Text(
                       label,
@@ -85,8 +95,10 @@ class BformButton extends StatelessWidget {
                       },
                     ),
                   ),
-                  if (icon != null) //
-                    Icon(icon),
+                  if (iconSuffix == true && iconAsset != null)
+                    Expanded(child: Image.asset(iconAsset!)),
+                  if (iconSuffix == true && icon != null) //
+                    Expanded(child: Icon(icon)),
                 ],
               ),
             ),
