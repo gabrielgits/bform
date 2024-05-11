@@ -80,6 +80,7 @@ class BformButton extends StatelessWidget {
                   if (iconSuffix == false && icon != null) //
                     Icon(
                       icon,
+                      color: textColor,
                       size: fontSize == null ? null : fontSize! * 1.5,
                     ),
                   SizedBox(width: 8),
@@ -111,6 +112,7 @@ class BformButton extends StatelessWidget {
                   if (iconSuffix == true && icon != null) //
                     Icon(
                       icon,
+                      color: textColor,
                       size: fontSize == null ? null : fontSize! * 1.5,
                     ),
                 ],
