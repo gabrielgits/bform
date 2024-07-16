@@ -38,7 +38,7 @@ class BformTextInput extends StatelessWidget {
       keyboardType: textInputType,
       onChanged: onChange,
       controller: controller,
-      readOnly: false,
+      readOnly: readOnly,
       style: TextStyle(fontSize: fontSize),
       decoration: decoration(),
     );
