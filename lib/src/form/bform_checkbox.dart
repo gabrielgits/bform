@@ -28,7 +28,7 @@ class _BformGroupRadioState extends State<BformCheckbox> {
   @override
   void initState() {
     super.initState();
-     isChecked = widget.inicialState;
+    isChecked = widget.inicialState;
   }
 
   @override

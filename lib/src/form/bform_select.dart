@@ -58,7 +58,7 @@ class _BformSelectState extends State<BformSelect> {
           child: DropdownButton<BformObj>(
             value: seletedValue,
             icon: const SizedBox(),
-            underline : const SizedBox(),
+            underline: const SizedBox(),
             onChanged: (value) {
               widget.onChange(value!);
               setState(() {

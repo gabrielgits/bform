@@ -5,6 +5,7 @@ class BformForm extends StatelessWidget {
   final Color? color;
   final double? width;
   final double? height;
+  final double? padding;
   final Color? background;
   final BoxBorder? border;
 
@@ -16,6 +17,7 @@ class BformForm extends StatelessWidget {
     this.border,
     this.background,
     this.height,
+    this.padding,
   }) : super(key: key);
 
   @override
@@ -23,7 +25,7 @@ class BformForm extends StatelessWidget {
     return Container(
       width: width,
       height: height,
-      padding: const EdgeInsets.fromLTRB(10, 25, 10, 10),
+      padding: EdgeInsets.all(padding ?? 10),
       decoration: decoration(),
       child: SingleChildScrollView(child: child),
     );
@@ -34,7 +36,8 @@ class BformForm extends StatelessWidget {
       color: background,
       border: border,
       borderRadius: BorderRadius.circular(8),
-      boxShadow: (color != null) ? [BoxShadow(blurRadius: 10, color: color!)] : null,
+      boxShadow:
+          (color != null) ? [BoxShadow(blurRadius: 8, color: color!)] : null,
     );
   }
 }
